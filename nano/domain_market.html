@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>域名市场-去中心化域名交易市场-爱名网|luoam.com</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="http://static.anman.org/static/bootstrap/css/bootstrap.min.css">
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="http://static.anman.org/static/css/luoam/styless.css" id="theme-styles">
+
+<style type="text/css">
+    .bodys{
+        height: 50px;
+        overflow: hidden;
+    }
+    body{
+        word-break: break-all;
+    }
+
+</style>
+</head>
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-static-top" style="margin-bottom:0px;padding-top: 0px;padding-bottom: 0px;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed logovcenter btn" data-toggle="collapse"
+                    data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" id="logo">
+                <img src="http://static.anman.org/static/img/luoam/logoa.png" class="logo" alt="clean Blog">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <div class="nav navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html"><b class="vcenter">首页</b></a></li>
+                    <li><a href="domain_market.html"><b class="vcenter">域名市场</b></a></li>
+                    <li><a href="domain_public.html"><b class="vcenter">发布域名</b></a></li>
+                    <li><a href="user_center.html"><b class="vcenter">用户中心</b></a></li>
+                </ul>
+            </div>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<header class="page-heading">
+    <div class="container">
+        <h1>去中心化域名交易市场</h1>
+        <p>由星云链驱动.</p>
+    </div>
+</header>
+<section id="noExtensions" style="margin-top:1px;padding-bottom: 0px;background-color:red; color:#fff;display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="noExtension col-md-12" id="noExtension">
+                注意: 请安装谷歌浏览器扩展<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">WebExtensionWallet</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="widewrapper main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12 blog-main" id="main" role="main">
+                    <div class="row" id="tiles">
+
+                    </div>
+
+            </div>
+            <aside class="col-md-4 hidden-sm hidden-xs blog-aside">
+
+                <div class="aside-widget">
+                    <header>
+                        <h3>新发布的域名</h3>
+                    </header>
+                    <div class="body">
+                        <ul class="clean-list" id="newDomain">
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="aside-widget">
+                    <header>
+                        <h3>新成交的域名</h3>
+                    </header>
+                    <div class="body">
+                        <ul class="clean-list" id="closedDomain">
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="aside-widget">
+                    <header>
+                        <h3>标签</h3>
+                    </header>
+                    <div class="body clearfix">
+                        <ul class="tags">
+                            <li><a href="https://nebulas.io/">Nebulas</a></li>
+                            <li><a href="index.html">域名</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="paging">
+            <a href="#" class="older">上一页</a><a href="#" class="older">下一页</a>
+        </div>
+    </div>
+</div>
+<div class="fade loading modal" data-backdrop=static>
+    <div class=modal-dialog>
+        <div class=modal-content>
+            <div class=modal-body>
+                <div class=progress>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role=progressbar
+                         style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="widewrapper footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-widget" id="about">
+                    <h3><i class="fa fa-user"></i>关于</h3>
+
+                </div>
+
+                <div class="col-md-4 footer-widget" id="articles">
+                    <h3><i class="fa fa-pencil"></i>链接</h3>
+
+                </div>
+
+                <div class="col-md-4 footer-widget" id="contactme">
+                    <h3><i class="fa fa-envelope"></i>联系我</h3>
+
+
+                    <!--<div class="footer-widget-icon">-->
+                    <!--<i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-google"></i>-->
+                    <!--</div>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="widewrapper copyright" id="copyright">
+
+    </div>
+</footer>
+
+<script src="http://static.anman.org/static/jquery/jquery.min.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://static.anman.org/static/js/modernizr.js"></script>
+<script src="http://static.anman.org/static/js/jquery.imagesloaded.js"></script>
+<script src="http://static.anman.org/static/js/jquery.wookmark.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/bootbox.min.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/nebulas.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/nebPay.js"></script>
+<script src="http://static.anman.org/static/js/jquery.cookie.js"></script>
+<script src="seed.js"></script>
+<script src="footer.js"></script>
+<script type="text/javascript">
+    $("#about").append(footer.about());
+    $("#articles").append(footer.articles());
+    $("#contactme").append(footer.contactme());
+    $("#copyright").append(footer.copyright());
+</script>
+<script type="text/javascript">
+    if (typeof(webExtensionWallet) === "undefined") {
+        $("#noExtensions").show();
+    }
+
+
+    var Amount = 0;
+
+    var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
+    var nebPay = new NebPay();
+
+    (function ($) {
+//step1
+        var callFunction = "GetDomainsDesc";
+        var tmp = [5,0];
+        var callArgs = JSON.stringify(tmp);
+        nebPay.simulateCall(ContractAddress, Amount, callFunction, callArgs, {
+            qrcode: {
+                showQRCode: false
+            },
+            listener: ndomainscbSimulateCall
+        });
+        function ndomainscbSimulateCall(resp) {
+            console.log("callback resp: " + resp);
+            // $(".modal.loading").modal("hide");
+            if (resp.execute_err) {
+                bootbox.dialog({
+                    backdrop: true,
+                    onEscape: true,
+                    message: resp.execute_err,
+                    size: "large",
+                    title: "Error"
+                });
+
+            } else {
+                let result = JSON.parse(resp.result);
+                console.log(result);
+                if (result.length===0){
+                    let str = "<li>没有新域名</li>";
+                    $("#newDomain").append(str);
+                }else {
+                    for (let i = result.length-1; i >=0 ; i--) {
+                        let item = result[i];
+                        let str = "<li><a href=\"domain.html?domain_id="+item.domain_id+"\">"+item.domain_name+"</a></li>";
+                        $("#newDomain").append(str);
+                    }
+                }
+
+            }
+
+        }
+
+
+        //step2
+        var callFunction = "GetClosedDomainsDesc";
+        var tmp = [5,0];
+        var callArgs = JSON.stringify(tmp);
+        nebPay.simulateCall(ContractAddress, Amount, callFunction, callArgs, {
+            qrcode: {
+                showQRCode: false
+            },
+            listener: cdomainscbSimulateCall
+        });
+        function cdomainscbSimulateCall(resp) {
+            console.log("callback resp: " + resp);
+            // $(".modal.loading").modal("hide");
+            if (resp.execute_err) {
+                bootbox.dialog({
+                    backdrop: true,
+                    onEscape: true,
+                    message: resp.execute_err,
+                    size: "large",
+                    title: "Error"
+                });
+
+            } else {
+                let result = JSON.parse(resp.result);
+                console.log(result);
+                if (result.length===0){
+                    let str = "<li>没有域名成交</li>";
+                    $("#closedDomain").append(str);
+                }else {
+                    for (let i = result.length-1; i >=0 ; i--) {
+                        let item = result[i];
+                        let str = "<li><a href=\"domain.html?domain_id="+item.domain_id+"\">"+item.domain_name+"</a></li>";
+                        $("#closedDomain").append(str);
+                    }
+                }
+
+            }
+
+        }
+        //step3
+        // $(".modal.loading").modal("show");
+        var callFunction = "GetDomains";
+        var tmp = [100,0];
+        var callArgs = JSON.stringify(tmp);
+        nebPay.simulateCall(ContractAddress, Amount, callFunction, callArgs, {
+            qrcode: {
+                showQRCode: false
+            },
+            listener: cbSimulateCall
+        });
+
+        function cbSimulateCall(resp) {
+            console.log("callback resp: " + resp);
+            // $(".modal.loading").modal("hide");
+            if (resp.execute_err) {
+                bootbox.dialog({
+                    backdrop: true,
+                    onEscape: true,
+                    message: resp.execute_err,
+                    size: "large",
+                    title: "Error"
+                });
+
+            } else {
+                let result = JSON.parse(resp.result);
+                console.log(result);
+                if (result.length===0){
+                    bootbox.dialog({
+                        backdrop: true,
+                        onEscape: true,
+                        message: "没有域名信息",
+                        size: "large",
+                        title: "Error"
+                    });
+                }else {
+                    for (let i = 0; i < result.length; i++) {
+                        let item = result[i];
+                        let str = "<div class=\"divs col-md-6 col-sm-6\">" +
+                            "                            <article class=\" blog-teaser\">" +
+                            "                                <header>" +
+                            "                                    <h3>"+item.domain_name.substr(0,19)+"</h3>" +
+                            "                                    <span class=\"meta\">一口价:"+item.price+"</span>"+
+                            "                                    <hr>" +
+                            "                                </header>" +
+                            "                                <div class=\"clearfix\">" +
+                            "                                    <a href=\"domain.html?domain_id="+item.domain_id+"\" class=\"btn btn-clean-one\">查看</a>" +
+                            "                                </div>" +
+                            "                            </article>" +
+                            "                        </div>";
+                        $('#tiles').append(str);
+                    }
+                }
+
+            }
+
+        }
+
+    })(jQuery);
+
+
+
+</script>
+</body>
+</html>

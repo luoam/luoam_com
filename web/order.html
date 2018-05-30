@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>订单详情-去中心化域名交易市场-爱名网|luoam.com</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="http://static.anman.org/static/bootstrap/css/bootstrap.min.css">
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="http://static.anman.org/static/css/luoam/styless.css" id="theme-styles">
+    <link rel="stylesheet" href="http://static.anman.org/Trumbowyg/ui/trumbowyg.min.css" type="text/css">
+
+    <style type="text/css">
+        body{
+            word-break: break-all;
+        }
+        .noExtension {
+            margin: auto;
+            font-size: 23px;
+        }
+    </style>
+</head>
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-static-top" style="margin-bottom:0px;padding-top: 0px;padding-bottom: 0px;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed logovcenter btn" data-toggle="collapse"
+                    data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" id="logo">
+                <img src="http://static.anman.org/static/img/luoam/logoa.png" class="logo" alt="clean Blog">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <div class="nav navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html"><b class="vcenter">首页</b></a></li>
+                    <li><a href="domain_market.html"><b class="vcenter">域名市场</b></a></li>
+                    <li><a href="domain_public.html"><b class="vcenter">发布域名</b></a></li>
+                    <li><a href="user_center.html"><b class="vcenter">用户中心</b></a></li>
+                </ul>
+            </div>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<header class="page-heading">
+    <div class="container">
+        <h1>去中心化域名交易市场</h1>
+        <p>由星云链驱动.</p>
+    </div>
+</header>
+<section id="noExtensions" style="margin-top:1px;padding-bottom: 0px;background-color:red; color:#fff;display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="noExtension col-md-12" id="noExtension">
+                注意: 请安装谷歌浏览器扩展<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">WebExtensionWallet</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="widewrapper main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12 blog-main" id="main" role="main">
+                <article class="blog-post">
+                    <div class="body" id="body">
+                        <hr style="height: 3px; background-color: #5e5e5e;">
+                        <h4>域名详情:</h4>
+                    </div>
+                    <div class="body" id="order">
+                        <hr style="height: 3px; background-color: #5e5e5e;">
+                        <h4>订单详情:</h4>
+
+                    </div>
+
+                    <div class="body" id="domain_status">
+                        <hr style="height: 3px; background-color: #5e5e5e;">
+                        <h4>订单状态变更记录:</h4>
+                        <table class="table table-hover" id="table_status">
+
+
+                        </table>
+
+                    </div>
+                </article>
+
+
+            </div>
+            <aside class="col-md-4 hidden-sm hidden-xs blog-aside">
+
+                <div class="aside-widget">
+                    <header>
+                        <h3>菜单栏</h3>
+                    </header>
+                    <div class="body">
+                        <ul class="clean-list">
+                            <li>hello</li>
+                            <li><a href="user_edit.html">信息维护</a></li>
+                            <li><a href="user_domains.html">域名管理</a></li>
+                            <li><a href="user_orders.html">订单管理</a></li>
+                            <li><a href="user_balance.html">余额管理</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </aside>
+        </div>
+
+    </div>
+</div>
+<div class="fade loading modal" data-backdrop=static>
+    <div class=modal-dialog>
+        <div class=modal-content>
+            <div class=modal-body>
+                <div class=progress>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role=progressbar
+                         style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="widewrapper footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-widget" id="about">
+                    <h3><i class="fa fa-user"></i>关于</h3>
+
+                </div>
+
+                <div class="col-md-4 footer-widget" id="articles">
+                    <h3><i class="fa fa-pencil"></i>链接</h3>
+
+                </div>
+
+                <div class="col-md-4 footer-widget" id="contactme">
+                    <h3><i class="fa fa-envelope"></i>联系我</h3>
+
+
+                    <!--<div class="footer-widget-icon">-->
+                    <!--<i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-google"></i>-->
+                    <!--</div>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="widewrapper copyright" id="copyright">
+
+    </div>
+</footer>
+
+<script src="http://static.anman.org/static/jquery/jquery.min.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://static.anman.org/static/js/modernizr.js"></script>
+<script src="http://static.anman.org/static/js/jquery.imagesloaded.js"></script>
+<script src="http://static.anman.org/static/js/jquery.wookmark.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/bootbox.min.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/nebulas.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/nebPay.js"></script>
+<script src="http://static.anman.org/static/js/jquery.cookie.js"></script>
+<script src="http://static.anman.org/Trumbowyg/trumbowyg.min.js"></script>
+<script src="http://static.anman.org/Trumbowyg/langs/zh_cn.min.js"></script>
+<script src="seed.js"></script>
+<script src="footer.js"></script>
+<script src="initcall.js"></script>
+<script type="text/javascript">
+    $("#about").append(footer.about());
+    $("#articles").append(footer.articles());
+    $("#contactme").append(footer.contactme());
+    $("#copyright").append(footer.copyright());
+</script>
+<script type="text/javascript">
+    if (typeof(webExtensionWallet) === "undefined") {
+        $("#noExtensions").show();
+    }
+
+    var Amount = 0;
+    var domain_id;
+    var domain_name;
+    var price;
+    var order_id;
+    var domain_status;
+    var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
+    var nebPay = new NebPay();
+
+    $(document).ready(function (){
+        Date.prototype.Format = function (fmt) { //author: meizz
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "H+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        };
+
+
+        $.extend({
+            getUrlVars: function () {
+                var vars = [], hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            },
+            getUrlVar: function (name) {
+                return $.getUrlVars()[name];
+            }
+        });
+
+
+        domain_id = $.getUrlVar('domain_id');
+        //step1
+        $(".modal.loading").modal("show");
+        initCall(function (params) {
+            console.log(params);
+            var tmp = [];
+            tmp.push(domain_id);
+            var callArgs = JSON.stringify(tmp);
+            neb.api
+                .call({
+                    from: params.from,
+                    to: params.to,
+                    value: params.value,
+                    nonce: params.nonce,
+                    gasPrice: params.gasPrice,
+                    gasLimit: params.gasLimit,
+                    contract: {
+                        "function": "GetDomainByid",
+                        "args": callArgs
+                    }
+                })
+                .then(function (resp) {
+
+                    console.log("callback resp: " + resp);
+                    $(".modal.loading").modal("hide");
+                    if (resp.execute_err) {
+                        bootbox.dialog({
+                            backdrop: true,
+                            onEscape: true,
+                            message: resp.execute_err,
+                            size: "large",
+                            title: "Error"
+                        });
+
+                    } else {
+                        let result = JSON.parse(resp.result);
+                        console.log(result);
+                        if (result.length === 0) {
+                            bootbox.dialog({
+                                backdrop: true,
+                                onEscape: true,
+                                message: "没有域名信息",
+                                size: "large",
+                                title: "Error"
+                            });
+                        } else {
+                            domain_name = result.domain_name;
+                            switch (result.status) {
+                                case "New":
+                                    domain_status = "新发布";
+                                    break;
+                                case "Pending":
+                                    domain_status = "交易中";
+                                    break;
+                                case "Closed":
+                                    domain_status = "已售出";
+                                    break;
+                            }
+
+                            let str = "<h1>"+result.domain_name+"(<b>"+domain_status+"</b>)</h1>" +
+                                "                        <div class=\"meta\">\n" +
+                                "                            <i class=\"fa fa-user\"></i>卖家"+result.saler +
+                                "                        </div>" +
+                                "                        <hr>"+
+                                "                        <h1>一口价:"+result.price+"NAS</h1>"+
+                                "                        <hr><h1>域名介绍:</h1>"+
+                                result.description+
+                                "<hr>";
+                            if (result.status==="New"){
+                                str+= "<input class=\"btn btn-success\" value=\"购买\" onclick=\"buy('"+result.domain_id+"')\"> ";
+                            }
+                            if (result.status==="Pending") {
+                                str+="<input class=\"btn btn-success\" value=\"交易中\" disabled=\"disabled\">";
+                            }
+                            if (result.status==="Closed") {
+                                str+="<input class=\"btn btn-success\" value=\"已出售\" disabled=\"disabled\">";
+                            }
+                            $('#body').append(str);
+
+                            setTimeout(function () {
+                                //step2
+                                $(".modal.loading").modal("show");
+                                initCall(function (params) {
+                                    console.log(params);
+                                    var tmp = [];
+                                    tmp.push(domain_id);
+                                    var callArgs = JSON.stringify(tmp);
+                                    neb.api
+                                        .call({
+                                            from: params.from,
+                                            to: params.to,
+                                            value: params.value,
+                                            nonce: params.nonce,
+                                            gasPrice: params.gasPrice,
+                                            gasLimit: params.gasLimit,
+                                            contract: {
+                                                "function": "GetOrderByDomain",
+                                                "args": callArgs
+                                            }
+                                        })
+                                        .then(function (resp) {
+
+                                            console.log("callback resp: " + resp);
+                                            $(".modal.loading").modal("hide");
+                                            if (resp.execute_err) {
+                                                bootbox.dialog({
+                                                    backdrop: true,
+                                                    onEscape: true,
+                                                    message: resp.execute_err,
+                                                    size: "large",
+                                                    title: "Error"
+                                                });
+
+                                            } else {
+                                                let result = JSON.parse(resp.result);
+                                                console.log(result);
+                                                if (result.length === 0) {
+                                                    bootbox.dialog({
+                                                        backdrop: true,
+                                                        onEscape: true,
+                                                        message: "没有订单信息",
+                                                        size: "large",
+                                                        title: "Error"
+                                                    });
+                                                } else {
+                                                    order_id = result.order_id;
+                                                    let status_zh;
+                                                    switch (result.status) {
+                                                        case "New":
+                                                            status_zh = "买家付款";
+                                                            break;
+                                                        case "Pending":
+                                                            status_zh = "卖家确认订单";
+                                                            break;
+                                                        case "Closed":
+                                                            status_zh = "买家确认订单";
+                                                            break;
+                                                        case "Cancel":
+                                                            status_zh = "买家取消订单";
+                                                            break;
+                                                    }
+                                                    let str = "<h1>域名:" + domain_name + "(<b>" + domain_status + "</b>)</h1>" +
+                                                        "                        <div class=\"meta\">\n" +
+                                                        "                            <i class=\"fa fa-user\"></i>买家" + result.buyer +
+                                                        "                        </div>" +
+                                                        "                        <hr>" +
+                                                        "                        <h1>已支付:" + (Utils.toBigNumber(result.payment/1000000000000000000)).toFixed(8) + "NAS</h1>" +
+                                                        "                        <h1>订单状态:" + status_zh + "</h1>" +
+                                                        "                        <hr><h1>订单备注:</h1>" +
+                                                        result.description +
+                                                        "<hr>";
+                                                    if (result.status === "New") {
+                                                        str += "<input class=\"btn btn-success\" value=\"卖家请确认订单\" onclick=\"salerdo('" + result.order_id + "')\" id=\"salerdo\"> ";
+                                                        str += "<input class=\"btn btn-danger\" value=\"买家可以取消订单\" onclick=\"canceldo('" + result.order_id + "')\" id=\"canceldo\"> ";
+                                                    }
+                                                    if (result.status === "Pending") {
+                                                        str += "<input class=\"btn btn-success\" value=\"买家请确认订单\" onclick=\"buyerdo('" + result.order_id + "')\" id=\"buyerdo\"> ";
+                                                    }
+                                                    if (result.status === "Closed") {
+                                                        str += "<input class=\"btn btn-success\" value=\"已完结\" disabled=\"disabled\">";
+                                                    }
+                                                    if (result.status === "Cancel") {
+                                                        str += "<input class=\"btn btn-success\" value=\"买家取消订单\" disabled=\"disabled\">";
+                                                    }
+                                                    $('#order').append(str);
+
+
+                                                    setTimeout(function () {
+                                                        //step3
+                                                        $(".modal.loading").modal("show");
+                                                        initCall(function (params) {
+                                                            console.log(params);
+                                                            var tmp = [];
+                                                            tmp.push(order_id);
+                                                            var callArgs = JSON.stringify(tmp);
+                                                            neb.api
+                                                                .call({
+                                                                    from: params.from,
+                                                                    to: params.to,
+                                                                    value: params.value,
+                                                                    nonce: params.nonce,
+                                                                    gasPrice: params.gasPrice,
+                                                                    gasLimit: params.gasLimit,
+                                                                    contract: {
+                                                                        "function": "GetOrderLog",
+                                                                        "args": callArgs
+                                                                    }
+                                                                })
+                                                                .then(function (resp) {
+                                                                    console.log("callback resp: " + resp);
+                                                                    $(".modal.loading").modal("hide");
+                                                                    if (resp.execute_err) {
+                                                                        bootbox.dialog({
+                                                                            backdrop: true,
+                                                                            onEscape: true,
+                                                                            message: resp.execute_err,
+                                                                            size: "large",
+                                                                            title: "Error"
+                                                                        });
+
+                                                                    } else {
+                                                                        let result = JSON.parse(resp.result);
+                                                                        console.log(result);
+                                                                        if (result.length === 0) {
+                                                                            bootbox.dialog({
+                                                                                backdrop: true,
+                                                                                onEscape: true,
+                                                                                message: "没有订单状态信息",
+                                                                                size: "large",
+                                                                                title: "Error"
+                                                                            });
+                                                                        } else {
+                                                                            for (let i = 0; i < result.length; i++) {
+                                                                                let item = result[i];
+                                                                                let ftime = showtime(item.timestamp);
+                                                                                let str = "<tr>" +
+                                                                                    "                                <td>" + item.status + "</td>" +
+                                                                                    "                                <td>" + item.operator + "</td>" +
+                                                                                    "                                <td>" + ftime + "</td>" +
+                                                                                    "                            </tr>";
+                                                                                $('#table_status').append(str);
+                                                                            }
+
+                                                                        }
+
+                                                                    }
+                                                                })
+                                                                .catch(function (err) {
+                                                                    console.log(JSON.stringify(err));
+                                                                });
+                                                        });
+
+
+                                                    },1000);
+
+                                                }
+
+                                            }
+                                        })
+                                        .catch(function (err) {
+                                            console.log(JSON.stringify(err));
+                                        });
+                                });
+
+
+                            },1000);
+
+                        }
+
+                    }
+                })
+                .catch(function (err) {
+                    console.log(JSON.stringify(err));
+                });
+        });
+
+
+    });
+
+
+    function showtime(t) {
+        var newDate = new Date();
+        newDate.setTime(t);
+        console.log(newDate.toLocaleString());
+        return newDate.Format("yyyy年MM月dd日 HH:mm:ss");
+    }
+
+    var buy = function (domain_id) {
+      location.href = "domain.html?domain_id="+domain_id;
+    };
+    var canceldo = function (order_id) {
+        $("#canceldo").attr('disabled',true);
+        $(".modal.loading").modal("show");
+        let result = [];
+        result.push(order_id);
+        let callArgs = JSON.stringify(result);
+        let callFunction = "CancelOrder";
+        nebPay.call(ContractAddress, Amount, callFunction, callArgs, {
+            qrcode: {
+                showQRCode: true
+            },
+            listener: cbPush        //设置listener, 处理交易返回信息
+        });
+    };
+
+    var buyerdo = function (order_id) {
+        $("#buyerdo").attr('disabled',true);
+        $(".modal.loading").modal("show");
+        let result = [];
+        result.push(order_id);
+        let callArgs = JSON.stringify(result);
+        let callFunction = "BuyerConfirmOrder";
+        nebPay.call(ContractAddress, Amount, callFunction, callArgs, {
+            qrcode: {
+                showQRCode: true
+            },
+            listener: cbPush        //设置listener, 处理交易返回信息
+        });
+    };
+    var salerdo = function (order_id) {
+        $("#salerdo").attr('disabled',true);
+        $(".modal.loading").modal("show");
+        let result = [];
+        result.push(order_id);
+        let callArgs = JSON.stringify(result);
+        let callFunction = "SalerConfirmOrder";
+        nebPay.call(ContractAddress, Amount, callFunction, callArgs, {
+            qrcode: {
+                showQRCode: true
+            },
+            listener: cbPush        //设置listener, 处理交易返回信息
+        });
+    };
+    var cbPush = function (resp) {
+        console.log("response of push: " + JSON.stringify(resp));
+        getstatus(resp.txhash);
+    };
+    var getstatus = function (txhash) {
+        let v = this;
+        $(".modal.loading").modal("hide");
+        neb.api.getTransactionReceipt(txhash)
+            .then(o => {
+                console.log(JSON.stringify(o));
+                this.transaction_status = o.status;
+                this.red_address = o.from;
+                if (o.status === 2) {
+                    window.setTimeout(() => this.getstatus(txhash), 2000)
+                } else if (o.status === 1) {
+                    bootbox.dialog({
+                        backdrop: true,
+                        onEscape: true,
+                        message: "操作成功",
+                        size: "large",
+                        title: "SUCCESS"
+                    });
+                    location.reload();
+                } else if (o.status === 0) {
+                    console.log(o);
+                    bootbox.dialog({
+                        backdrop: true,
+                        onEscape: true,
+                        message: o.execute_error,
+                        size: "large",
+                        title: "ERROR"
+                    });
+                }
+            })
+            .catch(function (o) {
+                console.log(o)
+            })
+    };
+
+</script>
+</body>
+</html>

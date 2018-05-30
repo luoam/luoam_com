@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>用户登录-去中心化域名交易市场-爱名网|luoam.com</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="http://static.anman.org/static/bootstrap/css/bootstrap.min.css">
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="http://static.anman.org/static/css/luoam/styless.css" id="theme-styles">
+
+    <style type="text/css">
+        .noExtension {
+            margin: auto;
+            font-size: 23px;
+        }
+
+        body {
+            word-break: break-all;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-static-top" style="margin-bottom:0px;padding-top: 0px;padding-bottom: 0px;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed logovcenter btn" data-toggle="collapse"
+                    data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" id="logo">
+                <img src="http://static.anman.org/static/img/luoam/logoa.png" class="logo" alt="clean Blog">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <div class="nav navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html"><b class="vcenter">首页</b></a></li>
+                    <li><a href="domain_market.html"><b class="vcenter">域名市场</b></a></li>
+                    <li><a href="domain_public.html"><b class="vcenter">发布域名</b></a></li>
+                    <li><a href="user_center.html"><b class="vcenter">用户中心</b></a></li>
+                </ul>
+            </div>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+<header class="page-heading">
+    <div class="container">
+        <h1>去中心化域名交易市场</h1>
+        <p>由星云链驱动.</p>
+    </div>
+</header>
+<section id="noExtensions" style="margin-top:1px;padding-bottom: 0px;background-color:red; color:#fff;display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="noExtension col-md-12" id="noExtension">
+                注意: 请安装谷歌浏览器扩展<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">WebExtensionWallet</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="widewrapper main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-8 col-sm-12 col-xs-12 blog-main" id="main" role="main">
+                    <div id="tiles" class="row">
+                        <div class="form-horizontal">
+                            <h2 style="text-align: center;">用户登录</h2>
+                            <div class="form-group">
+                                <label for="account" class="col-sm-2 control-label">钱包地址:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="account" placeholder="钱包地址" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default" onclick="login()">登录</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <p>
+                                没有注册过？请先<a href="user_reg.html"><b>注册</b></a>
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <aside class="col-md-4 hidden-sm hidden-xs blog-aside">
+
+                    <div class="aside-widget">
+                        <header>
+                            <h3>菜单栏</h3>
+                        </header>
+                        <div class="body">
+                            <ul class="clean-list">
+                                <li>hello</li>
+                                <li>只需要输入钱包地址</li>
+                                <li>区块链世界具有特有的匿名性</li>
+                                <li>需要培育良好的个人信用</li>
+                                <li>所有的交易都是建立在互相信任的基础上</li>
+                                <li>完整和真实的个人信息有助于更好的成交</li>
+                                <li>每一笔交易都值得珍惜</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </aside>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="fade loading modal" data-backdrop=static>
+    <div class=modal-dialog>
+        <div class=modal-content>
+            <div class=modal-body>
+                <div class=progress>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role=progressbar
+                         style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="widewrapper footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-widget" id="about">
+                    <h3><i class="fa fa-user"></i>关于</h3>
+
+                </div>
+
+                <div class="col-md-4 footer-widget" id="articles">
+                    <h3><i class="fa fa-pencil"></i>链接</h3>
+
+                </div>
+
+                <div class="col-md-4 footer-widget" id="contactme">
+                    <h3><i class="fa fa-envelope"></i>联系我</h3>
+
+
+                    <!--<div class="footer-widget-icon">-->
+                    <!--<i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-google"></i>-->
+                    <!--</div>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="widewrapper copyright" id="copyright">
+
+    </div>
+</footer>
+
+<script src="http://static.anman.org/static/jquery/jquery.min.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://static.anman.org/static/js/modernizr.js"></script>
+<!--<script src="http://static.anman.org/static/js/jquery.imagesloaded.js"></script>-->
+<!--<script src="http://static.anman.org/static/js/jquery.wookmark.js"></script>-->
+<script src="http://static.anman.org/static/bootstrap/js/bootbox.min.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/nebulas.js"></script>
+<script src="http://static.anman.org/static/bootstrap/js/nebPay.js"></script>
+<script src="http://static.anman.org/static/js/jquery.cookie.js"></script>
+<script src="seed.js"></script>
+<script src="footer.js"></script>
+<script type="text/javascript">
+    $("#about").append(footer.about());
+    $("#articles").append(footer.articles());
+    $("#contactme").append(footer.contactme());
+    $("#copyright").append(footer.copyright());
+</script>
+<script type="text/javascript">
+    if (typeof(webExtensionWallet) === "undefined") {
+        $("#noExtensions").show();
+    }
+
+
+    var Amount = 0;
+
+    var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
+    var nebPay = new NebPay();
+    var login = function () {
+        $(".modal.loading").modal("show");
+        var account = $("#account").val();
+        var callFunction = "GetUser";
+        var tmp = [];
+        tmp.push(account);
+        var callArgs = JSON.stringify(tmp);
+        nebPay.simulateCall(ContractAddress, Amount, callFunction, callArgs, {
+            qrcode: {
+                showQRCode: false
+            },
+            listener: cbSimulateCall
+        });
+    };
+
+    function cbSimulateCall(resp) {
+        console.log("callback resp: " + JSON.stringify(resp));
+        if (resp.execute_err) {
+            $(".modal.loading").modal("hide");
+            bootbox.dialog({
+                backdrop: true,
+                onEscape: true,
+                message: "用户信息不存在",
+                size: "large",
+                title: "Error"
+            });
+            return false;
+        }
+        let result = JSON.parse(resp.result);
+        $.cookie('account', result.account);
+        setTimeout(function () {
+            location.href = "user_center.html";
+        }, 2000);
+    }
+
+    (function ($) {
+        $.cookie('account', null);
+    })(jQuery);
+</script>
+</body>
+</html>
